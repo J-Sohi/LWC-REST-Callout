@@ -1,0 +1,28 @@
+<template>
+	<lightning-card title="Exchange Rates" icon-name="standard:currency">
+		<div class="slds-m-around_medium">
+			<!-- <lightning-button label="Test" onclick={handleGetExchangeRate} variant="Neutral"></lightning-button>
+			<lightning-input type="text" label="Enter Currency" onchange={handleInputChange}></lightning-input> -->
+			<!-- <lightning-combobox
+				name="Currency"
+				label="Currency"
+				value={rateSymbol}
+				placeholder="Select Currency"
+				options={options}
+				onchange={handleInputChange} >
+			</lightning-combobox> -->
+
+			<c-search-component
+				labely="Currency"
+				icon-name="standard:currency"
+				label-name="Currency"
+				placeholder='Search'
+				values={codes}
+				search-fields={searchFields}
+				display-fields={displayFields}
+				onlookup={handleLookup}
+				></c-search-component>
+			<lightning-input type="text" label="Exchange Rate" read-only="true" value={rateValue}></lightning-input>
+		</div>
+</lightning-card>
+</template>
